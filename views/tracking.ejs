@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Track</title></head>
+<body>
+  <h1>Track Your Item</h1>
+  <form method="POST"><input name="tracking" placeholder="Enter tracking number"><button>Track</button></form>
+  <% if (item) { %>
+    <h2>Found</h2>
+    <p>Name: <%= item.name %></p>
+    <p>Department: <%= item.department %></p>
+    <p>Status: <%= item.status %></p>
+    <a href="/invoice/<%= item.tracking %>">View Invoice</a>
+  <% } %>
+</body></html>
