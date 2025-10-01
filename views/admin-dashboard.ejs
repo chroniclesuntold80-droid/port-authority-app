@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Dashboard</title></head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <p><a href="/logout">Logout</a></p>
+  <form method="POST" action="/dashboard/add">
+    <input name="name" placeholder="Item name" required>
+    <input name="department" placeholder="Clearance department" required>
+    <input name="tracking" placeholder="Tracking number (PA-...)" required>
+    <select name="status"><option>Pending</option><option>Processing</option><option>Cleared</option></select>
+    <button>Add Item</button>
+  </form>
+  <h2>Items</h2>
+  <ul>
+    <% items.forEach(i => { %>
+      <li><strong><%= i.tracking %></strong> — <%= i.name %> — <%= i.department %> — <%= i.status %></li>
+    <% }) %>
+  </ul>
+</body></html>
