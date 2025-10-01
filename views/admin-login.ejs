@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Admin Login</title></head>
+<body>
+  <h1>Admin Login</h1>
+  <% if (typeof error !== 'undefined' && error) { %><p style="color:red"><%= error %></p><% } %>
+  <form method="POST">
+    <input name="username" placeholder="Username" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <button>Login</button>
+  </form>
+</body></html>
